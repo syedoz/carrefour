@@ -10,7 +10,7 @@
 		position: relative;
 		label {
 			position: absolute; top: 10px; left: 20px; margin: 0;
-			color: #dddddd; font-size: 14px; z-index: 10;
+			color: #dddddd; font-size: 14px; z-index: 4;
 			-webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease;
     		-o-transition: all 0.2s ease; transition: all 0.2s ease;
 		}
@@ -22,7 +22,7 @@
 	}
 
 	.genTxt {
-		padding: 10px 20px; color: #000; border: 1px solid $border; border-radius: 4px;
+		padding: 10px 20px; color: #000; border: 1px solid $border; border-radius: 4px; background: transparent;
 		-webkit-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
     	-moz-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
     	box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
