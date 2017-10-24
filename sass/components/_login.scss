@@ -1,0 +1,92 @@
+.login-form-cont {max-width: 400px; margin: 60px auto 0px;}
+.login-form {
+	border: 3px solid $border; border-radius: 4px; padding: 30px 50px 40px; text-align: center; position: relative;
+	h2 {font-size: 24px; font-weight: 600; color: #414141; margin: 0;}
+	p {font-size: 14px; color: #333333; margin-bottom: 60px; margin-top: 10px;}
+	input {
+		width: 100%;
+	}
+	.lblWrap {
+		position: relative;
+		label {
+			position: absolute; top: 10px; left: 20px; margin: 0;
+			color: #dddddd; font-size: 14px; z-index: 10;
+			-webkit-transition: all 0.2s ease; -moz-transition: all 0.2s ease;
+    		-o-transition: all 0.2s ease; transition: all 0.2s ease;
+		}
+	&.focused {
+		label {
+			position: absolute; top: -22px; left: 0px; margin: 0;
+			color: #000; font-size: 14px; font-style: italic;
+		}
+	}
+
+	.genTxt {
+		padding: 10px 20px; color: #000; border: 1px solid $border; border-radius: 4px;
+		-webkit-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+    	-moz-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+    	box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+    	position: relative; z-index: 5;
+		&:focus {
+			border: 1px solid $baseColor; outline: 0;
+			-webkit-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4),0px 0px 8px 0px #add7ff;
+	    	-moz-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4),0px 0px 8px 0px #add7ff;
+	    	box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4),0px 0px 8px 0px #add7ff;
+		}
+	}
+	&.error {
+		.genTxt {
+			border: 1px solid red;
+			-webkit-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+	    	-moz-box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+	    	box-shadow: inset 1px 1px 4px 0px rgba(246,246,246,0.4);
+		}
+		.req {
+			display: block; right: 0; left: auto; top: -23px; padding: 3px 18px; z-index: 4;
+			color: #f6303f; background: #fff0f1; font-size: 12px; font-style: normal;
+		}
+	}
+	.req {display: none;}
+
+	&:first-child {.genTxt {margin-bottom: 28px;}}
+	}
+	.links {
+		padding: 20px 0px;
+		.siCheck {
+			position: relative; float: left;
+			label {
+				margin: 0; font-weight: 400; font-size: 12px; color: #414141;
+				-webkit-user-select: none;  /* Chrome all / Safari all */
+				-moz-user-select: none;     /* Firefox all */
+				-ms-user-select: none;      /* IE 10+ */
+				user-select: none; 
+			}
+		}
+		.fpass {
+			float: right; font-size: 12px; padding-top: 2px; color: $baseColor;
+			&:hover, &:focus {text-decoration: none;}
+		}
+	}
+	.frmCta {
+		background: $baseColor; color: #fff; text-align: center; padding: 12px 0px;
+		border-radius: 4px; font-weight: 400; border: 0; font-size: 20px;
+	}
+}
+
+#loginBox {
+	display: none; position: fixed; top: 0; bottom: 0; left: 0; right: 0;
+	width: 100%; background: rgba(0,0,0,0.7); z-index: 20;
+	span {
+		padding: 30px 0px; background: #fff; font-size: 28px; color: #000; position: relative;
+    	text-align: center; display: block; max-width: 300px; margin: 150px auto 0px;
+	}
+	a {position: absolute; bottom: 10px; font-size: 14px; width: 100%; left: 0;}
+}
+#errorlbl {color: red; font-size: 14px; text-align: center; display: none; position: absolute; bottom: 5px; width: 100%; left: 0;}
+
+
+@media only screen and (max-width: 400px){
+	.login-form {
+	    padding: 30px 20px 40px;
+	}
+}

@@ -1,0 +1,33 @@
+.divider {
+	width: 100%; height: 2px; background: $border; margin: 70px 0px;
+}
+.listing {
+	.item {
+		    width: 27.33%; float: left; margin-bottom: 20px;
+		    &:nth-child(3n+2) {margin: 0px 70px;}
+		.imgHolder {
+			border: 3px solid $border; margin-bottom: 18px;
+			img {width: 100%;}
+		}
+		.desc {
+			span {display: block;}
+			.itemNa {font-size: 14px; color: #414141;}
+			.price {font-size: 18px; font-weight: 600; color: #000;}
+		}
+	}
+}
+
+@media only screen and (max-width: 1200px){
+	.listing .item {width: auto; max-width: 27.33%;}
+	.listing .item:nth-child(3n+2) {margin: 0px 60px;}
+}
+
+@media only screen and (max-width: 768px){
+	.listing {text-align: center;}
+	.listing .item {max-width: 50%; margin: 0px 20px 20px; display: inline-block; float: none; text-align: left;}
+	.listing .item:nth-child(3n+2) {margin: 0px 20px 20px;}
+}
+
+@media only screen and (max-width: 480px){
+	.listing .item {max-width: 100%;}
+}

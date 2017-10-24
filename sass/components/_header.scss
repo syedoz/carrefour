@@ -1,0 +1,38 @@
+header {
+	display: table; width: 100%; margin-top: 30px;
+	.logo {display: table-cell;}
+
+	.search {
+		display: table-cell; vertical-align: bottom;
+		.srcTxt {
+			background: $primaryColor; float: right; border: 0; height: 40px; padding: 0;
+    		border-radius: 4px 0px 0px 4px; max-width: 176px; width: 0%; text-indent: -9999px; color: #000;
+    		-webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease;
+    		-o-transition: all 0.5s ease; transition: all 0.5s ease;
+    		&:focus {outline: 0;}
+		}
+		.srchCta {
+			background: url(../images/search.png) no-repeat center $primaryColor;
+			border: 0; width: 50px; height: 40px; border-radius: 4px; float: right;
+			&:focus {outline: 0;}
+		}
+	&.expand {
+		.srcTxt {text-indent: 0px; width: 100%; padding: 0px 10px 0px 20px;}
+		.srchCta {border-radius: 0px 4px 4px 0px;}
+	}
+	}
+}
+
+@media only screen and (max-width: 580px){
+	.login-form-cont {margin: 40px auto 0px;}
+	header {
+		display: block; margin-top: 70px;
+		.logo {display: block; width: 100%; text-align: center;}
+		.search {
+			display: block; vertical-align: bottom; position: fixed;
+    		top: 0; width: 100%; right: 0; z-index: 10;
+    		.srcTxt {max-width: 85%;}
+    		.srchCta {width: 15%;}
+    	}
+	}
+}
